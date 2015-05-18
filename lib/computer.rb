@@ -117,8 +117,8 @@ def get_next_gen_states(current_state,current_token)
           next_gen_scores.map! { |x| x == 0 && next_gen_scores.index(x) == index ? next_gen_score : x }
         end
       end
-      puts "end of branch gen scores"
-      puts next_gen_scores.inspect
+      # puts "end of branch gen scores (should = 1, -1, or 0)"
+      # puts next_gen_scores.inspect
       sum_leaf_scores = next_gen_scores.inject(:+)
     end
     return sum_leaf_scores

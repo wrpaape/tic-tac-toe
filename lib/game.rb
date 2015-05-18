@@ -27,10 +27,10 @@ class Game
 
     loop do
       player_turn
-      if @board.is_game_over?(@board.player_moves); break end
+      if @board.is_game_over?(@board.player_moves) || @board.is_tie?(@board.contents); break end
       sleep(0.5)
       computer_turn
-      if @board.is_game_over?(@board.computer_moves); break end
+      if @board.is_game_over?(@board.computer_moves) || @board.is_tie?(@board.contents); break end
     end
 
     game_over
